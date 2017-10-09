@@ -5,7 +5,52 @@
     <ContentPage.Content>
         <StackLayout>
             <Grid>
-                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+
+
+
+                </Grid.ColumnDefinitions>
+
+                <Label Text="GroupMeals"
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2"/>
+
+                <Image Source="https://i.ytimg.com/vi/b6dT4kyVUuY/maxresdefault.jpg"
+                       Grid.Row="1"
+                       Grid.Column="0"/>
+
+                <Label Text="Friend"
+                       Grid.Row="1"
+                       Grid.Column="1"/>
+
+                <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Red_Panda_in_a_Gingko_tree.jpg/220px-Red_Panda_in_a_Gingko_tree.jpg"
+                       Grid.Row="2"
+                       Grid.Column="0"/>
+
+                <Label Text="Recipes"
+                       Grid.Row="2"
+                       Grid.Column="0"/>
+
+                <Image Source="https://c402277.ssl.cf1.rackcdn.com/photos/806/images/hero_small/SCR_47384.jpg?1345530917"
+                       Grid.Row="3"
+                       Grid.Column="0"/>
+
+                <Label Text="Events"
+                       Grid.Row="3"
+                       Grid.Column="1"/>
+
+
+
             </Grid>
 
         </StackLayout>
