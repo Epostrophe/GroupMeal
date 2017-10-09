@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GroupMeal.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace GroupMeal
         {
             InitializeComponent();
 
-            MainPage = new GroupMeal.MainPage();
+            MainPage = new NavigationPage(new TitlePage());
         }
 
         protected override void OnStart()

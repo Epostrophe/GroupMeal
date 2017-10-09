@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GroupMeal.Pages.TitlePage">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Grid>
+            <Grid.RowDefinitons>
+                <RowDefinition Height="*"/>
+                    
+                </Grid.RowDefinitons>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                    
+                </Grid.ColumnDefinitions>
+            
+
+            <Label Text="GroupMeals" 
+               Grid.Row="0" 
+               Grid.Column="0" 
+               Grid.ColumnSpan="2"/>
+            <!--//Label for title of app-->
+
+
+            <Image Source="https://i.ytimg.com/vi/b6dT4kyVUuY/maxresdefault.jpg"
+               Grid.Row="1"
+               Grid.Column="0"/>
+            <!--//Icon for friends button-->
+
+            <Label Text="Friend"
+               Grid.Row="1"
+               Grid.Column="1"/>
+
+            <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Red_Panda_in_a_Gingko_tree.jpg/220px-Red_Panda_in_a_Gingko_tree.jpg"
+               Grid.Row="2"
+               Grid.Column="0"/>
+            <!--//Icon for recipes button-->
+
+            <Label Text="Recipes"
+               Grid.Row="2"
+               Grid.Column="1"/>
+
+            <Image Source="https://c402277.ssl.cf1.rackcdn.com/photos/806/images/hero_small/SCR_47384.jpg?1345530917"
+               Grid.Row="3"
+               Grid.Column="0"/>
+
+            <Label Text="Events"
+               Grid.Row="3"
+               Grid.Column="1"/>
+
+            </Grid>
+
+
+
+
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
