@@ -13,6 +13,12 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
+                <Image Source=""
+                       Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"/>
+                <Label Text="Test"
+                       Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Test"
+                       Grid.Row="0" Grid.Column="2"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>
