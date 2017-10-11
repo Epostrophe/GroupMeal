@@ -4,22 +4,35 @@
              x:Class="GroupMeal.Pages.FriendPage">
     <ContentPage.Content>
         <StackLayout>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Image Source=""
-                       Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"/>
-                <Label Text="Test"
-                       Grid.Row="0" Grid.Column="1"/>
-                <Label Text="Test"
-                       Grid.Row="0" Grid.Column="2"/>
-            </Grid>
+            <ListView x:Name="friendsListView">
+                <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="15,0">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source=""
+                                        Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"/>
+                                    <Label Text="Test"
+                                        Grid.Row="0" Grid.Column="1"/>
+                                    <Label Text="Test2"
+                                        Grid.Row="0" Grid.Column="2"/>
+                                </Grid>
+
+                                <Label Text="{Binding name}" />
+                            <Label Text="{Binding allergies}" />
+                         </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
