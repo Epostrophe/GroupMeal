@@ -16,5 +16,21 @@ namespace GroupMeal.Pages
         {
             InitializeComponent();
         }
+
+
+        private void friendButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new FriendPage());
+        }
+
+        private void recipeButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new RecipePage());
+        }
+
+        private void eventButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new EventPage());
+        }
     }
 }

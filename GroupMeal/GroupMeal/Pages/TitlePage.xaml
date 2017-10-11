@@ -23,31 +23,75 @@
                 <Label Text="GroupMeals"
                        Grid.Row="0"
                        Grid.Column="0"
-                       Grid.ColumnSpan="2"/>
+                       Grid.ColumnSpan="2"
+                       FontFamily="Century Gothic"
+                       FontSize="32"
+                       TextColor="Green"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
 
-                <Image Source="https://i.ytimg.com/vi/b6dT4kyVUuY/maxresdefault.jpg"
+                <Button Text=""
+                        x:Name="friendButton"
+                        Clicked="friendButton_Clicked"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        BackgroundColor="White"/>
+
+                <Image Source="friends"
                        Grid.Row="1"
                        Grid.Column="0"/>
 
-                <Label Text="Friend"
+                <Label Text="Friends"
                        Grid.Row="1"
-                       Grid.Column="1"/>
+                       Grid.Column="1"
+                       FontFamily="Century Gothic"
+                       FontSize="32"
+                       TextColor="Orange"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
 
-                <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Red_Panda_in_a_Gingko_tree.jpg/220px-Red_Panda_in_a_Gingko_tree.jpg"
+                <Button Text=""
+                        x:Name="recipeButton"
+                        Clicked="recipeButton_Clicked"
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        BackgroundColor="White"/>
+
+                <Image Source="recipes"
                        Grid.Row="2"
                        Grid.Column="0"/>
 
                 <Label Text="Recipes"
                        Grid.Row="2"
-                       Grid.Column="0"/>
+                       Grid.Column="1"
+                       FontFamily="Century Gothic"
+                       FontSize="32"
+                       TextColor="MediumPurple"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
+                
+                <Button Text=""
+                        x:Name="eventButton"
+                        Clicked="eventButton_Clicked"
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        BackgroundColor="White"/>
 
-                <Image Source="https://c402277.ssl.cf1.rackcdn.com/photos/806/images/hero_small/SCR_47384.jpg?1345530917"
+                <Image Source="events"
                        Grid.Row="3"
                        Grid.Column="0"/>
 
                 <Label Text="Events"
                        Grid.Row="3"
-                       Grid.Column="1"/>
+                       Grid.Column="1"
+                       FontFamily="Century Gothic"
+                       FontSize="32"
+                       TextColor="Blue"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
 
 
 
