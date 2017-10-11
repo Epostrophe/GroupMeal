@@ -38,6 +38,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\category.cs" />
+    <Compile Include="Models\event.cs" />
+    <Compile Include="Models\recipe.cs" />
+    <Compile Include="Models\user.cs" />
     <Compile Include="Pages\EventPage.xaml.cs">
       <DependentUpon>EventPage.xaml</DependentUpon>
     </Compile>
@@ -72,9 +76,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Pages\TitlePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
