@@ -8,5 +8,9 @@ namespace GroupMeal.Models
 {
     class category
     {
+        public string name { get; set; }
+
+        public string description { get; set; }
+
     }
 }
