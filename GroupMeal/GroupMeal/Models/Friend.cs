@@ -7,5 +7,7 @@
         public string likes { get; set; }
         public string dislikes { get; set; }
         public string allergies { get; set; }
+        public string imageURL { get; set; }
+        
     }
 }

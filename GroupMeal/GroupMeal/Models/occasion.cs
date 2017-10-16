@@ -14,6 +14,7 @@ namespace GroupMeal.Models
         public string name { get; set; }
         public List<Friend> Friend { get; set; }
         public List<recipe> recipe { get; set; }
+        public string imageURL { get; set; }
 
     } 
 }
