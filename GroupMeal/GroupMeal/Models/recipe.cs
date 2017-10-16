@@ -8,5 +8,10 @@ namespace GroupMeal.Models
 {
     class recipe
     {
+        public string listOfIngredients { get; set; }
+        public string name { get; set; }
+        public string direction { get; set; }
+        public int cookingTime { get; set; }
+        public string descriptions { get; set; }
     }
 }
