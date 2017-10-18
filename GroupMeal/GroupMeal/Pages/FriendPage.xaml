@@ -18,16 +18,16 @@
                                         <ColumnDefinition Width="50"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
-                                    <Image Source="{Binding image}"
+                                    <Image Source="{Binding imageURL}"
                                         HeightRequest="50"
                                         WidthRequest="50"
                                         Grid.Row="0"
                                         Grid.Column="0"
                                         Grid.RowSpan="2"/>
-                                    <Label Text="{Binding name}"
+                                    <Label Text="{Binding fullName}"
                                         Grid.Row="0"
                                         Grid.Column="1"/>
-                                    <Label Text="Allergies: {Binding allergies}"
+                                    <Label Text="{Binding allergies, StringFormat='Allergies:  {0}'}"
                                         Grid.Row="1"
                                         Grid.Column="1"/>
                                 </Grid>

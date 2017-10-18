@@ -23,14 +23,16 @@ namespace GroupMeal.Pages
             this.FriendsList = new List<Friend>();
 
             Friend friend1 = new Friend();
-            friend1.firstName = "Nathan Jordan";
-            friend1.lastName = "x";
+            friend1.imageURL = "friends.jpg";
+            friend1.firstName = "Nathan";
+            friend1.lastName = "Jordan";
             friend1.allergies = "apples";
             FriendsList.Add(friend1);
 
             Friend friend2 = new Friend();
-            friend2.firstName = "Andrew Jordan";
-            friend2.lastName = "x";
+            friend2.imageURL = "friends.jpg";
+            friend2.firstName = "Andrew";
+            friend2.lastName = "Jordan";
             friend2.allergies = "bananas";
             FriendsList.Add(friend2);
 
