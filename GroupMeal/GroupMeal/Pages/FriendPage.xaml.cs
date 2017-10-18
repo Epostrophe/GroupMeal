@@ -36,6 +36,13 @@ namespace GroupMeal.Pages
             friend2.allergies = "bananas";
             FriendsList.Add(friend2);
 
+            Friend friend3 = new Friend();
+            friend3.imageURL = "friends.jpg";
+            friend3.firstName = "Kenton";
+            friend3.lastName = "Hilderbrand";
+            friend3.allergies = "oranges";
+            FriendsList.Add(friend3);
+
             friendsListView.ItemsSource = this.FriendsList;
         }
     }
