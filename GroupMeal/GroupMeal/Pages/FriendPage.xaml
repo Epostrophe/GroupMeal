@@ -20,6 +20,8 @@
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="50"/>
                                         <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="30"/>
+                                        <ColumnDefinition Width="30"/>
                                     </Grid.ColumnDefinitions>
                                     <Image Source="{Binding imageURL}"
                                         HeightRequest="50"
@@ -32,7 +34,18 @@
                                         Grid.Column="1"/>
                                     <Label Text="{Binding allergies, StringFormat='Allergies:  {0}'}"
                                         Grid.Row="1"
-                                        Grid.Column="1"/>
+                                        Grid.Column="1"
+                                        Grid.ColumnSpan="3"/>
+                                    <Image Source="friends.jpg"
+                                        HeightRequest="20"
+                                        WidthRequest="20"
+                                        Grid.Row="0"
+                                        Grid.Column="2"/>
+                                    <Image Source="friends.jpg"
+                                        HeightRequest="20"
+                                        WidthRequest="20"
+                                        Grid.Row="0"
+                                        Grid.Column="3"/>
                                 </Grid>
                          </StackLayout>
                     </ViewCell>
