@@ -28,7 +28,8 @@ namespace GroupMeal.Pages
                 directions = "Put them together",
                 cookingTime = 11,
                 cookingTimeUnit = "hours",
-                image = "http://www.inspiredtaste.net/wp-content/uploads/2016/06/Avocado-Egg-Salad-Recipe-1-1200.jpg"
+                image = "http://www.inspiredtaste.net/wp-content/uploads/2016/06/Avocado-Egg-Salad-Recipe-1-1200.jpg",
+                allergies = "Peanuts"
 
 
             };

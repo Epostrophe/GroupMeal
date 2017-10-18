@@ -15,43 +15,31 @@
                                 <Grid>
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="*"/>
-                                        <RowDefinition Height="100"/>
-                                        <RowDefinition Height="20"/>
+                                        <RowDefinition Height="*"/>
+                    
                                     </Grid.RowDefinitions>
 
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="50"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
 
-                                    <Image WidthRequest="50"
-                                       HeightRequest="50"
-                                       Source="{Binding imageURL}"
-                                       Grid.Row="0"
-                                       Grid.Column="0"/>
+                                    <Image Source="{Binding imageURL}"
+                                        HeightRequest="50"
+                                        WidthRequest="50"
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        Grid.RowSpan="2"/>
 
                                     <Label Text="{Binding name}"
-                                       FontSize="Large"
-                                       Grid.Row="0"
-                                       Grid.Column="1"
-                                         />
+                                      Grid.Row="0"
+                                      Grid.Column="1"
+                                      Font="Bold"/>
 
-                                    <Label Text="{Binding Description}"
+                                    <Label Text="{Binding overview}"
                                        Grid.Row="1"
-                                       Grid.Column="2"/>
+                                       Grid.Column="1"/>
 
-                                    <Label Text="{Binding listOfIngredients}"
-                                           Grid.Row="1"
-                                           Grid.Column="3"/>
-                                    
-                                    <Label Text="{Binding cookingTime}"
-                                           Grid.Row="1"
-                                           Grid.Column="4"/>
-                                    
   
                                     
 
@@ -63,7 +51,8 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Grid>
+            <Grid BackgroundColor="Gray">
+                
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="100"/>
@@ -78,9 +67,9 @@
                                         Grid.Row="1"
                                         Grid.Column="0"
                        HorizontalOptions="Center"
-                       BackgroundColor="Gray"
-                       HeightRequest="100"
-                       WidthRequest="200">
+                       
+                       HeightRequest="50"
+                       WidthRequest="50">
                     
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"/>
@@ -91,9 +80,9 @@
                                         Grid.Row="1"
                                         Grid.Column="1"
                        HorizontalOptions="Center"
-                       WidthRequest="200"
-                       HeightRequest="100"
-                       BackgroundColor="Gray">
+                       WidthRequest="50"
+                       HeightRequest="50"
+                       >
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" NumberOfTapsRequired="1"/>
                     </Image.GestureRecognizers>
