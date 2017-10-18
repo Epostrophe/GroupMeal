@@ -4,11 +4,14 @@
              x:Class="GroupMeal.Pages.FriendPage">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="friendsListView">
+            <ListView x:Name="friendsListView"
+                      SeparatorVisibility="Default"
+                      SeparatorColor="Black"
+                      HasUnevenRows="True">
                 <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Padding="15,0">
+                        <StackLayout Padding="15">
                                 <Grid>
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="*"/>
