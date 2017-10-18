@@ -4,11 +4,10 @@
              x:Class="GroupMeal.Pages.RecipePage">
     <ContentPage.Content>
         <StackLayout>
-
-
-
             <ListView x:Name="recipeListView"
-                       HasUnevenRows="True">
+                       HasUnevenRows="True"
+                      SeparatorColor="Black">
+                
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -23,6 +22,10 @@
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
 
                                     <Image WidthRequest="50"
@@ -31,30 +34,28 @@
                                        Grid.Row="0"
                                        Grid.Column="0"/>
 
-                                    <Label Text="{Binding firstName, lastName}"
+                                    <Label Text="{Binding name}"
                                        FontSize="Large"
                                        Grid.Row="0"
-                                       Grid.Column="1"/>
+                                       Grid.Column="1"
+                                         />
 
                                     <Label Text="{Binding Description}"
                                        Grid.Row="1"
-                                       Grid.Column="1"/>
+                                       Grid.Column="2"/>
 
-                                    <Image Source="addperson.png"
-                                        Grid.Row="2"
-                                        Grid.Column="0">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"/>
-                                    </Image.GestureRecognizers>
-                                    </Image>
+                                    <Label Text="{Binding listOfIngredients}"
+                                           Grid.Row="1"
+                                           Grid.Column="3"/>
+                                    
+                                    <Label Text="{Binding cookingTime}"
+                                           Grid.Row="1"
+                                           Grid.Column="4"/>
+                                    
+  
+                                    
 
-                                    <Image Source="removeperson.png"
-                                        Grid.Row="2"
-                                        Grid.Column="1">
-                                        <Image.GestureRecognizers>
-                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" NumberOfTapsRequired="1"/>
-                                        </Image.GestureRecognizers>
-                                    </Image>
+
 
                                 </Grid>
                              </StackLayout>
@@ -62,7 +63,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <!--<Grid>
+            <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="100"/>
@@ -70,22 +71,34 @@
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="200"/>
                 </Grid.ColumnDefinitions>
 
-                
-                
-                <Label Text="Test"/>
-                <Image Source="https://i.ytimg.com/vi/b6dT4kyVUuY/maxresdefault.jpg"
-                       Grid.Row="1"
-                       Grid.Column="0"/>
+                <Image Source="addperson.png"
+                                        Grid.Row="1"
+                                        Grid.Column="0"
+                       HorizontalOptions="Center"
+                       BackgroundColor="Gray"
+                       HeightRequest="100"
+                       WidthRequest="200">
+                    
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
 
-                <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Red_Panda_in_a_Gingko_tree.jpg/220px-Red_Panda_in_a_Gingko_tree.jpg"
-                       Grid.Row="1"
-                       Grid.Column="1"/>
-
-
-            </Grid>-->
+                <Image Source="removeperson.png"
+                                        Grid.Row="1"
+                                        Grid.Column="1"
+                       HorizontalOptions="Center"
+                       WidthRequest="200"
+                       HeightRequest="100"
+                       BackgroundColor="Gray">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid> 
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

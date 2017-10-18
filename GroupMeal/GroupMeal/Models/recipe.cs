@@ -4,15 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace GroupMeal.Models
 {
-    class recipe
+    public class recipe
     {
         public string listOfIngredients { get; set; }
         public string name { get; set; }
-        public string direction { get; set; }
+        public string directions { get; set; }
         public int cookingTime { get; set; }
+        public string cookingTimeUnit { get; set; } 
         public string descriptions { get; set; }
-        public string imageURL { get; set; }
+        public string image { get; set; }
     }
 }
