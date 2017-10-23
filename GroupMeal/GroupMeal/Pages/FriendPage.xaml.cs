@@ -45,5 +45,15 @@ namespace GroupMeal.Pages
 
             friendsListView.ItemsSource = this.FriendsList;
         }
+
+        private void editButton_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void removePersonButton_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
