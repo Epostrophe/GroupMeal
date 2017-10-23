@@ -22,9 +22,11 @@
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="50"/>
                                         <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="20"/>
+                                        <ColumnDefinition Width="20"/>
                                     </Grid.ColumnDefinitions>
 
-                                    <Image Source="{Binding imageURL}"
+                                    <Image Source="{Binding image}"
                                         HeightRequest="50"
                                         WidthRequest="50"
                                         Grid.Row="0"
@@ -40,8 +42,21 @@
                                        Grid.Row="1"
                                        Grid.Column="1"/>
 
-  
-                                    
+
+                                    <Image Source="edit.png"
+                                           HeightRequest="20"
+                                           WidthRequest="20"
+                                          Grid.Row="0"
+                                          Grid.Column="2"/>
+                                    <Image Source="removeperson.png"
+                                           HeightRequest="20"
+                                           WidthRequest="20"
+                                           Grid.Row="0"
+                                           Grid.Column="3"/>
+
+
+
+
 
 
 
