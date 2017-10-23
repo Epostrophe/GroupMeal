@@ -11,6 +11,7 @@ using Xamarin.Forms.Xaml;
 
 namespace GroupMeal.Pages
 {
+    //Remove buttons on listview, add hold recognizer for delete
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RecipePage : ContentPage
     {
@@ -42,12 +43,36 @@ namespace GroupMeal.Pages
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new RecipeEditPage());
         }
 
         private void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
         {
+            Navigation.PushAsync(new RecipePage());
+        }
+
+       
+
+        private void recipeListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            // make sure the selected item is not null
+            if (e.SelectedItem == null)
+            {
+                return;
+            }
+
+            //grab the selected item as recipe class
+            recipe selectedRecipe = e.SelectedItem as recipe;
+
+            //deselect the item in the list
+            (sender as ListView).SelectedItem = null;
+
+            // send the recipe to the detail page
+            Navigation.PushAsync(new RecipeOverviewPage(selectedRecipe));
+
 
         }
+
+       
     }
 }
