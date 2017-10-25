@@ -15,6 +15,7 @@
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.ContextActions>
+                                
                                 <MenuItem Clicked="MenuItem_Clicked" CommandParameter="{Binding recipeID}"
                                     Text="Delete" IsDestructive="True" />
                             </ViewCell.ContextActions>

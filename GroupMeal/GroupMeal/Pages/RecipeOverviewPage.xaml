@@ -4,7 +4,7 @@
              x:Class="GroupMeal.Pages.RecipeOverviewPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text ="You can add friends here eventually"/>
+            <Label Text ="You can view all the properties of the recipe here eventually"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
