@@ -30,7 +30,8 @@ namespace GroupMeal.Pages
                 cookingTime = 11,
                 cookingTimeUnit = "hours",
                 image = "https://i.imgur.com/qeHLkzy.png",
-                allergies = "Peanuts"
+                allergies = "Peanuts",
+                recipeID = "1"
 
 
             };
@@ -73,6 +74,11 @@ namespace GroupMeal.Pages
 
         }
 
-       
+        private void MenuItem_Clicked(object sender, EventArgs e)
+        {
+            var mi = ((MenuItem)sender);
+            Recipes.Remove(Recipes.Where(x => x.recipeID == mi.CommandParameter.ToString()).FirstOrDefault());
+            this.recipeListView.ItemsSource = this.Recipes;
+        }
     }
 }
