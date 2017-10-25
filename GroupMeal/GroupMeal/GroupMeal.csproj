@@ -38,7 +38,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FriendEditPage.xaml.cs">
+    <Compile Include="Pages\FriendEditPage.xaml.cs">
       <DependentUpon>FriendEditPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\category.cs" />
@@ -87,7 +87,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FriendEditPage.xaml">
+    <EmbeddedResource Include="Pages\FriendEditPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
