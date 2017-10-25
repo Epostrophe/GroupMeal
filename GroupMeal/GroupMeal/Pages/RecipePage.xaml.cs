@@ -30,7 +30,7 @@ namespace GroupMeal.Pages
                 cookingTime = 11,
                 cookingTimeUnit = "hours",
                 image = "https://i.imgur.com/qeHLkzy.png",
-                allergies = "Peanuts",
+                allergies = "Peanuts aaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaa aaaaa aaaa aaaaaaaa aaaaaa aaaaaaaaaa aaaaaaa aaaaaaaaaaa aaaaaaaa aaaaaaaa aaaaaaa aaaaaaaaaa aaaa aaaaaaaa",
                 recipeID = "1"
 
 
