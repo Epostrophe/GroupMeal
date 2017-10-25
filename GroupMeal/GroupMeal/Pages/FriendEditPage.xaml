@@ -12,12 +12,12 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Image Source="{Binding friend.imageURL}"
+                <Image x:Name="friendImage"
                     HeightRequest="50"
                     WidthRequest="50"
                     Grid.Row="0"
                     Grid.Column="0"/>
-                <Label Text="Test"
+                <Label x:Name="nameLabel"
                     Grid.Row="0"
                     Grid.Column="1"/>
 
