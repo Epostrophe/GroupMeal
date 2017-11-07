@@ -5,9 +5,10 @@
     <ContentPage.Content>
         <StackLayout>
             <ListView x:Name="friendsListView"
-                      SeparatorVisibility="Default"
+                      HasUnevenRows="True"
                       SeparatorColor="Black"
-                      HasUnevenRows="True">
+                      ItemSelected="friendsListView_ItemSelected"
+                      VerticalOptions="FillAndExpand">
                 <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

@@ -48,10 +48,15 @@ namespace GroupMeal.Pages
 
         private void editButton_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new FriendEditPage(friendsListView.SelectedItem as Friend));
+            Navigation.PushAsync(new FriendOverviewPage(friendsListView.SelectedItem as Friend));
         }
 
         private void removePersonButton_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void friendsListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
 
         }

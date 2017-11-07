@@ -49,6 +49,9 @@
       <DependentUpon>EventPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Friend.cs" />
+    <Compile Include="Pages\FriendOverviewPage.xaml.cs">
+      <DependentUpon>FriendOverviewPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\FriendPage.xaml.cs">
       <DependentUpon>FriendPage.xaml</DependentUpon>
     </Compile>
@@ -92,7 +95,12 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\FriendOverviewPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\RecipeOverviewPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
