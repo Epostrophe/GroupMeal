@@ -17,5 +17,10 @@ namespace GroupMeal.Pages
         {
             InitializeComponent();
         }
+
+        private void editButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new RecipeEditPage());
+        }
     }
 }

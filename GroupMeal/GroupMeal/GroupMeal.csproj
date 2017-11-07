@@ -38,6 +38,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\GlobalConfig.cs" />
     <Compile Include="Pages\FriendEditPage.xaml.cs">
       <DependentUpon>FriendEditPage.xaml</DependentUpon>
     </Compile>
