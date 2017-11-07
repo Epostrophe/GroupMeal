@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using GroupMeal.Models;
 
 using Xamarin.Forms;
 
@@ -14,6 +15,7 @@ namespace GroupMeal
         {
             InitializeComponent();
 
+            GlobalConfig.initialize();
             MainPage = new NavigationPage(new TitlePage());
         }
 

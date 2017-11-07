@@ -4,7 +4,53 @@
              x:Class="GroupMeal.Pages.RecipeEditPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="You can edit this eventually" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="placeholderimage.png"
+                       Grid.Row="0"
+                       Grid.RowSpan="2"
+                       Grid.Column="0"/>
+                <Entry x:Name="recipeName" Placeholder="Enter the name of your recipe"
+                       Grid.Row="0"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="2"/>
+                <Entry x:Name="ingredients" Placeholder="Enter the ingredients of your recipe"
+                       Grid.Row="1"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="2"/>
+                <Entry x:Name="directions" Placeholder="Enter the directions for your recipe"
+                       Grid.Row="2"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2"/>
+                <Entry x:Name="cookTime" Placeholder="Enter the total cook time of your recipe"
+                       Grid.Row="3"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="3"/>
+                <Entry x:Name="allergens" Placeholder="Enter the allergens for your recipe"
+                       Grid.Row="4"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="3"/>
+                <Entry x:Name="servings" Placeholder="Enter the amount of people your recipe serves"
+                       Grid.Row="5"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="3"/>
+
+
+
+
+
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
