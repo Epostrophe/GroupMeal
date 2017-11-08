@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using GroupMeal.Models;
@@ -14,13 +14,13 @@ namespace GroupMeal.Pages
 
     public partial class FriendPage : ContentPage
     {
-        public List<Friend> FriendsList { get; set; }
+        public ObservableCollection<Friend> FriendsList { get; set; }
 
         public FriendPage()
         {
             InitializeComponent();
 
-            this.FriendsList = new List<Friend>();
+            this.FriendsList = new ObservableCollection<Friend>();
 
             Friend friend1 = new Friend();
             friend1.imageURL = "friends.jpg";
@@ -46,19 +46,27 @@ namespace GroupMeal.Pages
             friendsListView.ItemsSource = this.FriendsList;
         }
 
-        private void editButton_Clicked(object sender, EventArgs e)
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             Navigation.PushAsync(new FriendOverviewPage(friendsListView.SelectedItem as Friend));
         }
 
-        private void removePersonButton_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
         private void friendsListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
+            if (e.SelectedItem == null)
+            {
+                return;
+            }
+            Friend selectedFriend = e.SelectedItem as Friend;
+            (sender as ListView).SelectedItem = null;
+            Navigation.PushAsync(new FriendOverviewPage(selectedFriend));
+        }
 
+        private void MenuItem_Clicked(object sender, EventArgs e)
+        {
+            var mi = ((MenuItem)sender);
+            FriendsList.Remove(FriendsList.Where(x => x.friendID == mi.CommandParameter.ToString()).FirstOrDefault());
+            this.friendsListView.ItemsSource = this.FriendsList;
         }
     }
 }

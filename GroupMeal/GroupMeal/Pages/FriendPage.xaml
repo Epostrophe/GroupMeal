@@ -12,63 +12,60 @@
                 <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Padding="15">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="*"/>
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="50"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="30"/>
-                                        <ColumnDefinition Width="30"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Image Source="{Binding imageURL}"
-                                        HeightRequest="50"
-                                        WidthRequest="50"
-                                        Grid.Row="0"
-                                        Grid.Column="0"
-                                        Grid.RowSpan="2"/>
-                                    <Label Text="{Binding fullName}"
-                                        Grid.Row="0"
-                                        Grid.Column="1"/>
-                                    <Label Text="{Binding allergies, StringFormat='Allergies:  {0}'}"
-                                        Grid.Row="1"
-                                        Grid.Column="1"
-                                        Grid.ColumnSpan="3"/>
-                                    <Button Text=""
-                                        x:Name="editButton"
-                                        Clicked="editButton_Clicked"
-                                        HeightRequest="20"
-                                        WidthRequest="20"                                            
-                                        Grid.Row="0"
-                                        Grid.Column="2"
-                                        BackgroundColor="White"/>
-                                    <Image Source="edit.jpg"
-                                        HeightRequest="20"
-                                        WidthRequest="20"
-                                        Grid.Row="0"
-                                        Grid.Column="2"/>
-                                    <Button Text=""
-                                        x:Name="removePersonButton"
-                                        Clicked="removePersonButton_Clicked"
-                                        HeightRequest="20"
-                                        WidthRequest="20"
-                                        Grid.Row="0"
-                                        Grid.Column="3"
-                                        BackgroundColor="White"/>
-                                    <Image Source="removeperson.jpg"
-                                        HeightRequest="20"
-                                        WidthRequest="20"
-                                        Grid.Row="0"
-                                        Grid.Column="3"/>
-                                </Grid>
-                         </StackLayout>
+                        <ViewCell.ContextActions>
+                            <MenuItem Clicked="MenuItem_Clicked" CommandParameter="{Binding friendID}"
+                                Text="Delete" IsDestructive="True" />
+                        </ViewCell.ContextActions>
+                        <StackLayout Padding="10">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="30"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding imageURL}"
+                                    HeightRequest="50"
+                                    WidthRequest="50"
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Grid.RowSpan="2"/>
+                                <Label Text="{Binding fullName}"
+                                    Grid.Row="0"
+                                    Grid.Column="1"/>
+                                <Label Text="{Binding allergies, StringFormat='Allergies:  {0}'}"
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    Grid.ColumnSpan="3"/>
+                            </Grid>
+                        </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-            </ListView>
+        </ListView>
+            <Grid BackgroundColor="Gray">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="addperson.png"
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       HorizontalOptions="Center"
+                       HeightRequest="50"
+                       WidthRequest="50">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
