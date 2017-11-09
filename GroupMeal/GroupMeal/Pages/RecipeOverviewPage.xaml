@@ -4,6 +4,66 @@
              x:Class="GroupMeal.Pages.RecipeOverviewPage">
     <ContentPage.Content>
         <StackLayout>
+            
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image x:Name="recipePicture"
+                                        MinimumHeightRequest="50"
+                                        MinimumWidthRequest="50"
+                                        Grid.Row="0"
+                                        Grid.RowSpan="2"
+                                        Grid.Column="0"/>
+                                    <Label x:Name="recipeName" 
+                                         Grid.Row="0"
+                                         Grid.Column="1">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="Name " FontAttributes="Bold" FontSize="20"/>
+                                                <Span x:Name="nameOfRecipe"
+                                                      Text=""
+                                                      FontSize="20"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <Label x:Name="ingredients"
+                                         Text="{Binding listOfIngredients, StringFormat='List of Ingredients:  {0}'}"
+                                         Grid.Row="1"
+                                         Grid.Column="1">
+                                    </Label>
+                                    <Label x:Name="directions"
+                                         Text="{Binding directions, StringFormat='Description:  {0}'}"
+                                         Grid.Row="2"
+                                         Grid.Column="0"
+                                         Grid.ColumnSpan="2"/>
+                                    <Label x:Name="cookTime"
+                                         Text="{Binding cookingTime, StringFormat='Cooking Time:  {0}'}"
+                                         Grid.Row="3"
+                                         Grid.Column="0"
+                                         Grid.ColumnSpan="2"/>
+                                    <Label x:Name="allergens"
+                                         Text="{Binding allergies, StringFormat='Allergies:  {0}'}"
+                                         Grid.Row="4"
+                                         Grid.Column="0"
+                                         Grid.ColumnSpan="3"/>
+                                    <Label x:Name="servings" 
+                                         Text="{Binding servings, StringFormat='Servings:  {0}'}"
+                                         Grid.Row="5"
+                                         Grid.Column="0"
+                                         Grid.ColumnSpan="2"/>
+                                </Grid>
+                         
+    
             <Button x:Name="editButton"
                     Text="Edit recipe"
                     Clicked="editButton_Clicked"/>

@@ -35,11 +35,7 @@ namespace GroupMeal.Pages
             Navigation.PushAsync(new RecipeEditPage());
         }
 
-        private void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new RecipePage());
-        }
-
+       
        
 
         private void recipeListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
