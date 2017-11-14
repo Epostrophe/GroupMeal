@@ -16,18 +16,32 @@ namespace GroupMeal.Pages
     public partial class RecipePage : ContentPage
     {
         public ObservableCollection<recipe> Recipes { get; set; }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            if (settings.recipesData != null)
+            {
+                this.Recipes = new ObservableCollection<recipe>(settings.recipesData);
+            }
+            else
+            {
+                this.Recipes = new ObservableCollection<recipe>();
+            }
+            this.recipeListView.ItemsSource = this.Recipes;
+        }
         public RecipePage()
         {
             InitializeComponent();
 
-            this.Recipes = new ObservableCollection<recipe>(GlobalConfig.Recipes);
+         
 
           
             
 
             
 
-            this.recipeListView.ItemsSource = this.Recipes;
+            
         }
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
