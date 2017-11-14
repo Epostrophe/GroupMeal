@@ -47,7 +47,8 @@
                        Grid.ColumnSpan="3"/>
 
 
-
+                <Button x:Name="addRecipe"
+                        Clicked="addRecipe_Clicked"/>
 
 
             </Grid>

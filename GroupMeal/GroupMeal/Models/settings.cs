@@ -55,6 +55,26 @@ namespace GroupMeal.Models
             }
         }
 
-       
+        public static List<recipe> recipesData
+        {
+            get
+            {
+                string data = AppSettings.GetValueOrDefault(RecipeJson, RecipeDefault);
+                if (String.IsNullOrEmpty(data))
+                {
+                    return null;
+                }
+                else
+                {
+                    return JsonConvert.DeserializeObject<List<recipe>>(data);
+                }
+            }
+            set
+            {
+                string data = JsonConvert.SerializeObject(value);
+                AppSettings.AddOrUpdateValue(RecipeJson, data);
+            }
+        }
+
     }
 }
