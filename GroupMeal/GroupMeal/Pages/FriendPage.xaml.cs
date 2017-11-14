@@ -27,20 +27,26 @@ namespace GroupMeal.Pages
             friend1.firstName = "Nathan";
             friend1.lastName = "Jordan";
             friend1.allergies = "apples";
+            friend1.dislikes = "fish";
+            friend1.likes = "fudge";
             FriendsList.Add(friend1);
 
             Friend friend2 = new Friend();
             friend2.imageURL = "friends.jpg";
             friend2.firstName = "Andrew";
             friend2.lastName = "Jordan";
-            friend2.allergies = "bananas";
+            //friend2.allergies = "bananas";
+            friend2.dislikes = "chicken";
+            friend2.likes = "ice cream";
             FriendsList.Add(friend2);
 
             Friend friend3 = new Friend();
             friend3.imageURL = "friends.jpg";
             friend3.firstName = "Kenton";
             friend3.lastName = "Hilderbrand";
-            friend3.allergies = "oranges";
+            //friend3.allergies = "oranges";
+            //friend3.dislikes = "beef";
+            //friend3.likes = "cookies";
             FriendsList.Add(friend3);
 
             friendsListView.ItemsSource = this.FriendsList;
