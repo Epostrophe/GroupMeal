@@ -27,5 +27,10 @@ namespace GroupMeal
             friendImage.Source = friend1.imageURL;
             nameLabel.Text = friend1.fullName;
         }
+
+        private void MenuItem_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

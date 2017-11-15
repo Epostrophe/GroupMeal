@@ -20,8 +20,28 @@
                 <Label x:Name="nameLabel"
                     Grid.Row="0"
                     Grid.Column="1"/>
-
             </Grid>
+            <ListView x:Name="allergiesListView"
+                      HasUnevenRows="True"
+                      SeparatorColor="Black"
+                      
+                      VerticalOptions="FillAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Clicked="MenuItem_Clicked" CommandParameter="{Binding friendID}"
+                                      Text="Delete" IsDestructive="True" />
+                            </ViewCell.ContextActions>
+                            <StackLayout Padding="10">
+                                <Grid>
+                                    
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

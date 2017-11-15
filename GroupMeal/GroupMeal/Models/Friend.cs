@@ -1,12 +1,17 @@
-﻿namespace GroupMeal.Models
+﻿using System.Collections.ObjectModel;
+
+namespace GroupMeal.Models
 {
     public class Friend
     {
         public string firstName { get; set; }
         public string lastName { get; set; }
         public string fullName { get { return firstName + " " + lastName; } }
+        public ObservableCollection<string> Likes { get; set; }
         public string likes { get; set; }
+        public ObservableCollection<string> Dislikes { get; set; }
         public string dislikes { get; set; }
+        public ObservableCollection<string> Allergies { get; set; }
         public string allergies { get; set; }
         public string imageURL { get; set; }
         public string friendID { get; set; }
