@@ -18,14 +18,10 @@ namespace GroupMeal
         {
             InitializeComponent();
 
-            Friend friend1 = new Friend();
-            friend1.imageURL = "friends.jpg";
-            friend1.firstName = "Nathan";
-            friend1.lastName = "Jordan";
-            friend1.allergies = "apples";
+            friendImage.Source = friend.imageURL;
+            nameLabel.Text = friend.fullName;
 
-            friendImage.Source = friend1.imageURL;
-            nameLabel.Text = friend1.fullName;
+            allergiesListView.ItemsSource = friend.Allergies;
         }
 
         private void MenuItem_Clicked(object sender, EventArgs e)
