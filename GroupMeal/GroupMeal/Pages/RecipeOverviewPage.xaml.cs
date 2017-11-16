@@ -20,12 +20,19 @@ namespace GroupMeal.Pages
             InitializeComponent();
             recipePicture.Source = Recipe.image;
             nameOfRecipe.Text = Recipe.name;
+            listOfIngredients.Text = Recipe.listOfIngredients;
+            allDirections.Text = Recipe.directions;
+            finalCookingTime.Text = Recipe.cookingTime.ToString();
+            allAllergens.Text = Recipe.allergies;
+            finalServings.Text = Recipe.servings.ToString();
+
 
         }
 
         private void editButton_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new RecipeEditPage());
+            Navigation.PushAsync(new RecipeEditPage(false));
+            
         }
     }
 }

@@ -12,6 +12,8 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -48,7 +50,10 @@
 
 
                 <Button x:Name="addRecipe"
-                        Clicked="addRecipe_Clicked"/>
+                        Clicked="addRecipe_Clicked"
+                        Grid.Row="7"
+                        Grid.Column="1"
+                        Text="Apply"/>
 
 
             </Grid>
