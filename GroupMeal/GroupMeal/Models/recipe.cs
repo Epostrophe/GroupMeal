@@ -17,8 +17,6 @@ namespace GroupMeal.Models
         public string descriptions { get; set; }
         public string image { get; set; }
         public string allergies { get; set; }
-
-        public string overview { get { return "Cooking time: " + cookingTime + " " + cookingTimeUnit + "     " + "Allergies: " + allergies; } }
         public string recipeID { get; set; }
         public int servings { get; set; }
     }

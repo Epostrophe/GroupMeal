@@ -27,6 +27,7 @@ namespace GroupMeal.Pages
             newRecipe.directions = directions.Text;
             newRecipe.listOfIngredients = ingredients.Text;
             newRecipe.servings = Convert.ToInt32(servings.Text);
+            newRecipe.recipeID = Guid.NewGuid().ToString();
 
             List<recipe> Recipes = settings.recipesData;
 
