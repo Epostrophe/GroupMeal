@@ -31,7 +31,7 @@ namespace GroupMeal.Pages
 
         private void editButton_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new RecipeEditPage(false));
+            Navigation.PushAsync(new RecipeEditPage());
             
         }
     }

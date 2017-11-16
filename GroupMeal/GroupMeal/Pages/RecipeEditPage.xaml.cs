@@ -12,10 +12,10 @@ namespace GroupMeal.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RecipeEditPage : ContentPage
     {
-        bool edit = false;
-        public RecipeEditPage(bool edit) //finish passing recipe to this 
+        
+        public RecipeEditPage()//finish passing recipe to this 
         {
-            this.edit = edit;
+            
             InitializeComponent();
         }
 
