@@ -4,7 +4,84 @@
              x:Class="GroupMeal.Pages.EventPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="This is the events page" />
+            <ListView x:Name="eventListView"
+                       HasUnevenRows="True"
+                      SeparatorColor="Black"
+                      ItemSelected="eventListView_ItemSelected"
+                      VerticalOptions="FillAndExpand">
+
+
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Clicked="MenuItem_Clicked" CommandParameter="{Binding recipeID}"
+                                    Text="Delete" IsDestructive="True" />
+                            </ViewCell.ContextActions>
+                            <StackLayout Padding="10">
+                                <Grid>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+
+
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="75"/>
+                                        <ColumnDefinition Width="10"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <!--<ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>-->
+                                    </Grid.ColumnDefinitions>
+
+                                    <Image Source="{Binding image}"
+                                        HeightRequest="75"
+                                        WidthRequest="75"
+                                        Grid.Row="0"
+                                        Grid.RowSpan="2"
+                                        Grid.Column="0"
+                                        />
+
+                                    <Label Text="{Binding name}"
+                                      Grid.Row="0"
+                                      Grid.Column="2"
+                                      Font="Bold"
+                                      FontSize="25"
+                                      VerticalOptions="Center"
+                                       HorizontalOptions="Center"/>
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Grid BackgroundColor="Gray">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="addperson.png"
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       HorizontalOptions="Center"
+                       HeightRequest="50"
+                       WidthRequest="50">
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

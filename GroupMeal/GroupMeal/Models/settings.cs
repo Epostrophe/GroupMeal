@@ -28,11 +28,12 @@ namespace GroupMeal.Models
         private const string FriendJson = "";
         private static readonly string FriendJsonDefault = "";
 
-        private const string OccasionJson = "";
-        private static readonly string OccasionDefault = "";
 
         private const string RecipeJson = "";
-        private static readonly string RecipeDefault = "";
+        private static readonly string RecipeJsonDefault = "";
+
+        private const string EventJson = "";
+        private static readonly string EventJsonDefault = "";
 
         public static category categoryData
         {
@@ -59,7 +60,7 @@ namespace GroupMeal.Models
         {
             get
             {
-                string data = AppSettings.GetValueOrDefault(RecipeJson, RecipeDefault);
+                string data = AppSettings.GetValueOrDefault(RecipeJson, RecipeJsonDefault);
                 if (String.IsNullOrEmpty(data))
                 {
                     return null;
@@ -75,6 +76,49 @@ namespace GroupMeal.Models
                 AppSettings.AddOrUpdateValue(RecipeJson, data);
             }
         }
+        public static List<@event> eventData
+        {
+            get
+            {
+                string data = AppSettings.GetValueOrDefault(EventJson, EventJsonDefault);
+                if (String.IsNullOrEmpty(data))
+                {
+                    return null;
+                }
+                else
+                {
+                    return JsonConvert.DeserializeObject<List<@event>>(data);
+                }
+            }
+            set
+            {
+                string data = JsonConvert.SerializeObject(value);
+                AppSettings.AddOrUpdateValue(EventJson, data);
+            }
+        }
+
+        public static List<Friend> friendData
+        {
+            get
+            {
+                string data = AppSettings.GetValueOrDefault(FriendJson, FriendJsonDefault);
+                if (String.IsNullOrEmpty(data))
+                {
+                    return null;
+                }
+                else
+                {
+                    return JsonConvert.DeserializeObject<List<Friend>>(data);
+                }
+            }
+            set
+            {
+                string data = JsonConvert.SerializeObject(value);
+                AppSettings.AddOrUpdateValue(FriendJson, data);
+            }
+        }
+
+     
 
     }
 }

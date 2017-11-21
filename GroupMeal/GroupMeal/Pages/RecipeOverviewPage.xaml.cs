@@ -14,7 +14,7 @@ namespace GroupMeal.Pages
    
     public partial class RecipeOverviewPage : ContentPage
     {
-       
+        public recipe recipeOnPage;
         public RecipeOverviewPage(recipe Recipe)
         {
             InitializeComponent();
@@ -25,13 +25,13 @@ namespace GroupMeal.Pages
             finalCookingTime.Text = Recipe.cookingTime.ToString();
             allAllergens.Text = Recipe.allergies;
             finalServings.Text = Recipe.servings.ToString();
-
+            recipeOnPage = Recipe;
 
         }
 
         private void editButton_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new RecipeEditPage());
+            Navigation.PushAsync(new RecipeEditPage(recipeOnPage));
             
         }
     }
