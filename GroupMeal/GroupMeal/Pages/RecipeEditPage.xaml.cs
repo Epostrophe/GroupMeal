@@ -12,33 +12,56 @@ namespace GroupMeal.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RecipeEditPage : ContentPage
     {
-        
-        public RecipeEditPage()//finish passing recipe to this 
+        public recipe recipeOnPage;
+        public RecipeEditPage(recipe recipeOnPage = null)//finish passing recipe to this 
         {
             
             InitializeComponent();
+            if(recipeOnPage != null)
+            {
+                recipeName.Text = recipeOnPage.name;
+                ingredients.Text = recipeOnPage.listOfIngredients;
+                directions.Text = recipeOnPage.directions;
+                cookTime.Text = recipeOnPage.cookingTime.ToString();
+                allergens.Text = recipeOnPage.allergies;
+                servings.Text = recipeOnPage.servings.ToString();
+                this.recipeOnPage = recipeOnPage;
+            }
         }
 
         private void addRecipe_Clicked(object sender, EventArgs e)
         {
-            recipe newRecipe = new recipe();
-
-            newRecipe.name = recipeName.Text;
-            newRecipe.allergies = allergens.Text;
-            newRecipe.cookingTime = Convert.ToInt32(cookTime.Text);
-            newRecipe.directions = directions.Text;
-            newRecipe.listOfIngredients = ingredients.Text;
-            newRecipe.servings = Convert.ToInt32(servings.Text);
-            newRecipe.recipeID = Guid.NewGuid().ToString();
-
             List<recipe> Recipes = settings.recipesData;
 
-            if(Recipes == null)
+            if (Recipes == null)
             {
                 Recipes = new List<recipe>();
             }
 
-            Recipes.Add(newRecipe);
+            if (recipeOnPage != null)
+            {
+                recipe recipeToUpdate = Recipes.Where(rec => rec.recipeID == recipeOnPage.recipeID).First();
+                recipeToUpdate.name = recipeName.Text;
+                recipeToUpdate.allergies = allergens.Text;
+                recipeToUpdate.cookingTime = Convert.ToInt32(cookTime.Text);
+                recipeToUpdate.directions = directions.Text;
+                recipeToUpdate.listOfIngredients = ingredients.Text;
+                recipeToUpdate.servings = Convert.ToInt32(servings.Text);
+            }
+            else
+            {
+                recipeOnPage = new recipe();
+
+                recipeOnPage.name = recipeName.Text;
+                
+                recipeOnPage.recipeID = Guid.NewGuid().ToString();
+                Recipes.Add(recipeOnPage);
+            }
+           
+
+            
+
+           
 
             settings.recipesData = Recipes;
             Navigation.PopAsync();

@@ -39,6 +39,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="Models\event.cs" />
     <Compile Include="Models\GlobalConfig.cs" />
     <Compile Include="Models\settings.cs" />
     <Compile Include="Pages\FriendEditPage.xaml.cs">
