@@ -19,7 +19,7 @@ namespace GroupMeal.Pages
         {
             base.OnAppearing();
 
-            if (settings.recipesData != null)
+            if (settings.eventData != null)
             {
                 this.Events = new ObservableCollection<@event>(settings.eventData);
             }
