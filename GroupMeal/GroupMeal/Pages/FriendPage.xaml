@@ -37,7 +37,7 @@
                                 <Label Text="{Binding fullName}"
                                     Grid.Row="0"
                                     Grid.Column="1"/>
-                                <Label Text="{Binding displayPreferences, StringFormat='Allergies:  {0}'}"
+                                <Label Text="{Binding displayPreferences}"
                                     Grid.Row="1"
                                     Grid.Column="1"
                                     Grid.ColumnSpan="3"/>
