@@ -28,5 +28,10 @@ namespace GroupMeal
         {
 
         }
+
+        private void allergiesListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+
+        }
     }
 }
