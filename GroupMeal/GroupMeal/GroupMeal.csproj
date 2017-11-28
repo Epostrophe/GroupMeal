@@ -39,9 +39,15 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Helpers\Settings.cs" />
-    <Compile Include="Models\event.cs" />
+    <Compile Include="Models\%40event.cs" />
     <Compile Include="Models\GlobalConfig.cs" />
     <Compile Include="Models\settings.cs" />
+    <Compile Include="Pages\EventEditPage.xaml.cs">
+      <DependentUpon>EventEditPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EventOverviewPage.xaml.cs">
+      <DependentUpon>EventOverviewPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\FriendEditPage.xaml.cs">
       <DependentUpon>FriendEditPage.xaml</DependentUpon>
     </Compile>
@@ -146,6 +152,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\EventPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\EventEditPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\EventOverviewPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

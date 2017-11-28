@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GroupMeal.Pages.EventEditPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="placeholderimage.png"
+                       Grid.Row="0"
+                       Grid.RowSpan="2"
+                       Grid.Column="0"/>
+                <Entry x:Name="eventName" Placeholder="Enter the name"
+                       Grid.Row="0"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="2"/>
+                <Entry x:Name="people" Placeholder="Enter the people attending"
+                       Grid.Row="1"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="2"/>
+                <Entry x:Name="time" Placeholder="Enter the time of the event"
+                       Grid.Row="2"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2"/>
+                <Entry x:Name="location" Placeholder="Enter the location of the event"
+                       Grid.Row="3"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="3"/>
+                <Entry x:Name="recipes" Placeholder="Enter the recipes for the event"
+                       Grid.Row="4"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="3"/>
+              
+
+                <Button x:Name="addEvent"
+                        Clicked="addEvent_Clicked"
+                        Grid.Row="7"
+                        Grid.Column="1"
+                        Text="Apply"/>
+
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

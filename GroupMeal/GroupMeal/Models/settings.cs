@@ -19,20 +19,20 @@ namespace GroupMeal.Models
             }
         }
 
-        private const string UserJson = "";
+        private const string UserJson = "User";
         private static readonly string UserJsonDefault = "";
 
-        private const string CategoryJson = "";
+        private const string CategoryJson = "Category";
         private static readonly string CategoryJsonDefault = "";
 
-        private const string FriendJson = "";
+        private const string FriendJson = "Friend";
         private static readonly string FriendJsonDefault = "";
 
 
-        private const string RecipeJson = "";
+        private const string RecipeJson = "Recipe";
         private static readonly string RecipeJsonDefault = "";
 
-        private const string EventJson = "";
+        private const string EventJson = "Event";
         private static readonly string EventJsonDefault = "";
 
         public static category categoryData

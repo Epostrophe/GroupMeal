@@ -33,15 +33,6 @@ namespace GroupMeal.Pages
         public RecipePage()
         {
             InitializeComponent();
-
-         
-
-          
-            
-
-            
-
-            
         }
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)

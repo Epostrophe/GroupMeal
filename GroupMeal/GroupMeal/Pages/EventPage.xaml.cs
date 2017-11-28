@@ -36,6 +36,17 @@ namespace GroupMeal.Pages
 
         private void eventListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
+            if (e.SelectedItem == null)
+            {
+                return;
+            }
+
+            @event selectedEvent = e.SelectedItem as @event;
+
+            (sender as ListView).SelectedItem = null;
+
+             
+              Navigation.PushAsync(new EventOverviewPage(selectedEvent)); 
 
         }
 
@@ -46,7 +57,7 @@ namespace GroupMeal.Pages
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new EventEditPage());
         }
     }
 }

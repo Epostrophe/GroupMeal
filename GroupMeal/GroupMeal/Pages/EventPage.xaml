@@ -16,7 +16,7 @@
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.ContextActions>
-                                <MenuItem Clicked="MenuItem_Clicked" CommandParameter="{Binding recipeID}"
+                                <MenuItem Clicked="MenuItem_Clicked" CommandParameter="{Binding eventID}"
                                     Text="Delete" IsDestructive="True" />
                             </ViewCell.ContextActions>
                             <StackLayout Padding="10">
