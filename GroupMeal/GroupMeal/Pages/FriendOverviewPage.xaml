@@ -24,7 +24,7 @@
             <ListView x:Name="allergiesListView"
                       HasUnevenRows="True"
                       SeparatorColor="Black"
-                      
+                      ItemSelected="allergiesListView_ItemSelected"
                       VerticalOptions="FillAndExpand">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -34,9 +34,7 @@
                                       Text="Delete" IsDestructive="True" />
                             </ViewCell.ContextActions>
                             <StackLayout Padding="10">
-                                <Grid>
-                                    
-                                </Grid>
+                                <Label Text="{Binding .}"/>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
