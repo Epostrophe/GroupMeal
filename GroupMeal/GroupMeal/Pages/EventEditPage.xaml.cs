@@ -52,7 +52,7 @@ namespace GroupMeal.Pages
                 eventOnPage.name = eventName.Text;
               
                 eventOnPage.location = location.Text;
-               
+              
                 eventOnPage.eventID = Guid.NewGuid().ToString();
                 Events.Add(eventOnPage);
             }
