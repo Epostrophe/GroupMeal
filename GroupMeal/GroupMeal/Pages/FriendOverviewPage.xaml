@@ -30,7 +30,7 @@
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.ContextActions>
-                                <MenuItem Clicked="MenuItem_Clicked" CommandParameter="{Binding friendID}"
+                                <MenuItem Clicked="MenuItem_Clicked" CommandParameter="{Binding .}"
                                       Text="Delete" IsDestructive="True" />
                             </ViewCell.ContextActions>
                             <StackLayout Padding="10">
