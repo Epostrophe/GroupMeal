@@ -27,11 +27,13 @@
                        Grid.Row="0"
                        Grid.Column="1"
                        Grid.ColumnSpan="2"/>
-                <Entry x:Name="people" Placeholder="Enter the people attending"
+                <Picker x:Name="people" Title="Enter the people attending"
                        Grid.Row="1"
                        Grid.Column="1"
-                       Grid.ColumnSpan="2"/>
-                <Entry x:Name="time" Placeholder="Enter the time of the event"
+                       Grid.ColumnSpan="2"
+                        />
+                
+                <TimePicker x:Name="time"
                        Grid.Row="2"
                        Grid.Column="0"
                        Grid.ColumnSpan="2"/>
@@ -39,11 +41,16 @@
                        Grid.Row="3"
                        Grid.Column="0"
                        Grid.ColumnSpan="3"/>
-                <Entry x:Name="recipes" Placeholder="Enter the recipes for the event"
+                <Picker x:Name="recipes" Title="Enter the recipes for the event"
                        Grid.Row="4"
                        Grid.Column="0"
+                       Grid.ColumnSpan="3"
+                        SelectedIndexChanged="recipes_SelectedIndexChanged"/>
+                <Label x:Name="selectedRecipes"
+                       Grid.Row="5"
+                       Grid.Column="0"
                        Grid.ColumnSpan="3"/>
-              
+
 
                 <Button x:Name="addEvent"
                         Clicked="addEvent_Clicked"
