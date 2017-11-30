@@ -4,10 +4,9 @@
              x:Class="GroupMeal.Pages.EventOverviewPage">
     <ContentPage.Content>
         <StackLayout>
-            <!--Finish this page next time, then fix the EventPage code behind-->
-            <Label Text="Hey dude. Finish this page"/>
-            <Image Source="https://i.ytimg.com/vi/b6dT4kyVUuY/maxresdefault.jpg"/>
-            <!--<Grid>
+           
+            
+            <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
@@ -22,95 +21,82 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Image x:Name="recipePicture"
-                                        MinimumHeightRequest="50"
-                                        MinimumWidthRequest="50"
-                                        Grid.Row="0"
-                                        Grid.RowSpan="2"
-                                        Grid.Column="0"/>
-                <Label x:Name="recipeName" 
-                                         Grid.Row="0"
-                                         Grid.Column="1">
+                <Image x:Name="eventPicture"
+                       MinimumHeightRequest="50"
+                       MinimumWidthRequest="50"
+                       Grid.Row="0"
+                       Grid.RowSpan="2"
+                       Grid.Column="0"/>
+                <Label x:Name="eventName" 
+                       Grid.Row="0"
+                       Grid.Column="1">
                     <Label.FormattedText>
                         <FormattedString>
                             <Span Text="Name: " FontAttributes="Bold" FontSize="20"/>
-                            <Span x:Name="nameOfRecipe"
-                                                      Text=""
-                                                      FontSize="20"/>
+                            <Span x:Name="nameOfEvent"
+                                  Text=""
+                                  FontSize="20"/>
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Label x:Name="ingredients"
-                                         Grid.Row="1"
-                                         Grid.Column="1">
+                <Label x:Name="People"
+                       Grid.Row="1"
+                       Grid.Column="1">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="Ingredients: " FontAttributes="Bold" FontSize="20"/>
-                            <Span x:Name="listOfIngredients"
-                                                      Text=""
-                                                      FontSize="20"/>
+                            <Span Text="People: " FontAttributes="Bold" FontSize="20"/>
+                            <Span x:Name="listOfPeople"
+                                  Text=""
+                                  FontSize="20"/>
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Label x:Name="directions"
-                                         Grid.Row="2"
-                                         Grid.Column="0"
-                                         Grid.ColumnSpan="2">
+                <Label x:Name="time"
+                       Grid.Row="2"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="Directions: " FontAttributes="Bold" FontSize="20"/>
-                            <Span x:Name="allDirections"
-                                                      Text=""
-                                                      FontSize="20"/>
+                            <Span Text="Time: " FontAttributes="Bold" FontSize="20"/>
+                            <Span x:Name="finalTime"
+                                  Text=""
+                                  FontSize="20"/>
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Label x:Name="cookTime"
-                                         Grid.Row="3"
-                                         Grid.Column="0"
-                                         Grid.ColumnSpan="2">
+                <Label x:Name="location"
+                       Grid.Row="3"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="Cooking Time: " FontAttributes="Bold" FontSize="20"/>
-                            <Span x:Name="finalCookingTime"
-                                                      Text=""
-                                                      FontSize="20"/>
+                            <Span Text="Location: " FontAttributes="Bold" FontSize="20"/>
+                            <Span x:Name="finalLocation"
+                                  Text=""
+                                  FontSize="20"/>
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Label x:Name="allergens"
-                                         Text="{Binding allergies, StringFormat='Allergies:  {0}'}"
-                                         Grid.Row="4"
-                                         Grid.Column="0"
-                                         Grid.ColumnSpan="3">
+                <Label x:Name="recipes"
+                       Text="{Binding allergies, StringFormat='Allergies:  {0}'}"
+                       Grid.Row="4"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="3">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="Allergies: " FontAttributes="Bold" FontSize="20"/>
-                            <Span x:Name="allAllergens"
-                                                          Text=""
-                                                          FontSize="20"/>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <Label x:Name="servings" 
-                                         Grid.Row="5"
-                                         Grid.Column="0"
-                                         Grid.ColumnSpan="2">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span Text="Servings: " FontAttributes="Bold" FontSize="20"/>
-                            <Span x:Name="finalServings"
-                                                      Text=""
-                                                      FontSize="20"/>
+                            <Span Text="Recipes: " FontAttributes="Bold" FontSize="20"/>
+                            <Span x:Name="allRecipes"
+                                  Text=""
+                                  FontSize="20"/>
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
                 <Button x:Name="editButton"
-                                              Text="Edit recipe"
-                                              Clicked="editButton_Clicked"
-                                              Grid.Row="7"
-                                              Grid.Column="1"/>
-            </Grid>-->
+                        Text="Edit recipe"
+                        Clicked="editButton_Clicked"
+                        Grid.Row="7"
+                        Grid.Column="1"/>
+            </Grid>
 
         </StackLayout>
     </ContentPage.Content>

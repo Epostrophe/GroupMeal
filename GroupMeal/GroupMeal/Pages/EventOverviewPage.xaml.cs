@@ -16,6 +16,17 @@ namespace GroupMeal.Pages
         public EventOverviewPage(@event Events)
         {
             InitializeComponent();
+            nameOfEvent.Text = Events.name;
+            listOfPeople.Text = Events.people;
+            finalTime.Text = Events.time;
+            finalLocation.Text = Events.location;
+            allRecipes.Text = Events.recipes;
+            eventOnPage = Events;
+        }
+
+        private void editButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new EventEditPage(eventOnPage));
         }
     }
 }

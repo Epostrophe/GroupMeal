@@ -68,6 +68,7 @@ namespace GroupMeal.Pages
             var mi = ((MenuItem)sender);
             Recipes.Remove(Recipes.Where(x => x.recipeID == mi.CommandParameter.ToString()).FirstOrDefault());
             this.recipeListView.ItemsSource = this.Recipes;
+            settings.recipesData = this.Recipes.ToList();
         }
 
        

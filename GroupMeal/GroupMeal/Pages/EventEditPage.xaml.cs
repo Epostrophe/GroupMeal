@@ -19,12 +19,13 @@ namespace GroupMeal.Pages
             if(eventOnPage != null)
             {
                 eventName.Text = eventOnPage.name;
-                people.Text = eventOnPage.name;
-                time.Text = eventOnPage.name;
-                location.Text = eventOnPage.name;
-                recipes.Text = eventOnPage.name;
+                location.Text = eventOnPage.location;
                 this.eventOnPage = eventOnPage;
             }
+            this.people.ItemsSource = settings.friendData;
+            people.ItemDisplayBinding = new Binding("fullName");
+            this.recipes.ItemsSource = settings.recipesData;
+            recipes.ItemDisplayBinding = new Binding("name");
         }
 
         private void addEvent_Clicked(object sender, EventArgs e)
@@ -40,22 +41,35 @@ namespace GroupMeal.Pages
             {
                 @event eventToUpdate = Events.Where(rec => rec.eventID == eventOnPage.eventID).First();
                 eventToUpdate.name = eventName.Text;
-                eventToUpdate.people = people.Text;
-                eventToUpdate.time = time.Text;
+              
                 eventToUpdate.location = location.Text;
-                eventToUpdate.recipes = recipes.Text;
+               
             }
             else
             {
                 eventOnPage = new @event();
 
                 eventOnPage.name = eventName.Text;
-
+              
+                eventOnPage.location = location.Text;
+               
                 eventOnPage.eventID = Guid.NewGuid().ToString();
                 Events.Add(eventOnPage);
             }
             settings.eventData = Events;
             Navigation.PopAsync();
+        }
+
+        private void recipes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var picker = (Picker)sender;
+            int selectedIndex = picker.SelectedIndex;
+
+            if (selectedIndex != -1)
+            {
+                selectedRecipes.Text += ((recipe)picker.ItemsSource[selectedIndex]).name + ",";
+                picker.SelectedIndex = -1;
+            }
         }
     }
 }

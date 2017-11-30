@@ -52,7 +52,10 @@ namespace GroupMeal.Pages
 
         private void MenuItem_Clicked(object sender, EventArgs e)
         {
-
+            var mi = ((MenuItem)sender);
+            Events.Remove(Events.Where(x => x.eventID == mi.CommandParameter.ToString()).FirstOrDefault());
+            this.eventListView.ItemsSource = this.Events;
+            settings.eventData = this.Events.ToList();
         }
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
