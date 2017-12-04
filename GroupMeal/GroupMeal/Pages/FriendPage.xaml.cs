@@ -56,7 +56,8 @@ namespace GroupMeal.Pages
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new FriendOverviewPage(friendsListView.SelectedItem as Friend));
+            Friend newFriend = new Friend();
+            Navigation.PushAsync(new FriendOverviewPage(newFriend));
         }
 
         private void friendsListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
