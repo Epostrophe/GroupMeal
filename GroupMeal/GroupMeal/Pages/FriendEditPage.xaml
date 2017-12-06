@@ -4,7 +4,55 @@
              x:Class="GroupMeal.Pages.FriendEditPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin Forms!" />
+            <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+                <Image Source="placeholderimage.png"
+                       Grid.Row="0"
+                       Grid.RowSpan="2"
+                       Grid.Column="0"/>
+                <Entry x:Name="firstName" Placeholder="Enter first name"
+                       Grid.Row="0"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="2"/>
+                <Entry x:Name="lastName" Placeholder="Enter last name"
+                       Grid.Row="1"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="2"/>
+                <Entry x:Name="likes" Placeholder="Enter likes"
+                       Grid.Row="2"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2"/>
+                <Entry x:Name="dislikes" Placeholder="Enter dislikes"
+                       Grid.Row="3"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="3"/>
+                <Entry x:Name="allergies" Placeholder="Enter allergies"
+                       Grid.Row="4"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="3"/>
+               
+
+
+                <Button x:Name="addFriend"
+                        Clicked="addFriend_Clicked"
+                        Grid.Row="5"
+                        Grid.Column="1"
+                        Text="Apply"/>
+
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

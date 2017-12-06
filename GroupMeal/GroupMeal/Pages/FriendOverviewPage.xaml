@@ -7,6 +7,10 @@
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -17,29 +21,33 @@
                     WidthRequest="50"
                     Grid.Row="0"
                     Grid.Column="0"/>
-                <Label x:Name="nameLabel"
+                <Label x:Name="firstNameLabel"
                     Grid.Row="0"
                     Grid.Column="1"/>
+                <Label x:Name="lastNameLabel"
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2"/>
+                <Label x:Name="likesLabel"
+                       Grid.Row="2"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2"/>
+                <Label x:Name="dislikesLabel"
+                       Grid.Row="3"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2"/>
+                <Label x:Name="allergiesLabel"
+                       Grid.Row="4"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2"/>
+                <Button x:Name="editButton"
+                        Grid.Row="5"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Text="Edit"
+                        Clicked="editButton_Clicked"/>
             </Grid>
-            <ListView x:Name="allergiesListView"
-                      HasUnevenRows="True"
-                      SeparatorColor="Black"
-                      ItemSelected="allergiesListView_ItemSelected"
-                      VerticalOptions="FillAndExpand">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <ViewCell.ContextActions>
-                                <MenuItem Clicked="MenuItem_Clicked" CommandParameter="{Binding .}"
-                                      Text="Delete" IsDestructive="True" />
-                            </ViewCell.ContextActions>
-                            <StackLayout Padding="10">
-                                <Label Text="{Binding .}"/>
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+           
             <!--<Grid BackgroundColor="Gray">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>

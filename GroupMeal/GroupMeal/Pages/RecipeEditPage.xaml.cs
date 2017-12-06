@@ -53,7 +53,12 @@ namespace GroupMeal.Pages
                 recipeOnPage = new recipe();
 
                 recipeOnPage.name = recipeName.Text;
-                
+                recipeOnPage.allergies = allergens.Text;
+                recipeOnPage.cookingTime = Convert.ToInt32(cookTime.Text);
+                recipeOnPage.directions = directions.Text;
+                recipeOnPage.listOfIngredients = ingredients.Text;
+                recipeOnPage.servings = Convert.ToInt32(servings.Text);
+
                 recipeOnPage.recipeID = Guid.NewGuid().ToString();
                 Recipes.Add(recipeOnPage);
             }

@@ -16,48 +16,31 @@ namespace GroupMeal.Pages
     {
         public ObservableCollection<Friend> FriendsList { get; set; }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            if (settings.friendData != null)
+            {
+                this.FriendsList = new ObservableCollection<Friend>(settings.friendData);
+
+            }
+            else
+            {
+                this.FriendsList = new ObservableCollection<Friend>();
+            }
+            this.friendsListView.ItemsSource = this.FriendsList;
+        }
         public FriendPage()
         {
             InitializeComponent();
 
-            this.FriendsList = new ObservableCollection<Friend>();
-
-            Friend friend1 = new Friend();
-            friend1.imageURL = "friends.jpg";
-            friend1.firstName = "Nathan";
-            friend1.lastName = "Jordan";
-            friend1.Allergies.Add("apples");
-            friend1.Allergies.Add("grapes");
-            friend1.Allergies.Add("Pears");
-            friend1.Dislikes.Add("fish");
-            friend1.Likes.Add("fudge");
-            FriendsList.Add(friend1);
-
-            Friend friend2 = new Friend();
-            friend2.imageURL = "friends.jpg";
-            friend2.firstName = "Andrew";
-            friend2.lastName = "Jordan";
-            //friend2.Allergies.Add("bananas");
-            friend2.Dislikes.Add("chicken");
-            friend2.Likes.Add("ice cream");
-            FriendsList.Add(friend2);
-
-            Friend friend3 = new Friend();
-            friend3.imageURL = "friends.jpg";
-            friend3.firstName = "Kenton";
-            friend3.lastName = "Hilderbrand";
-            //friend3.Allergies.Add("oranges");
-            //friend3.Dislikes.Add("beef");
-            //friend3.Likes.Add("cookies");
-            FriendsList.Add(friend3);
-
-            friendsListView.ItemsSource = this.FriendsList;
+           
         }
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            Friend newFriend = new Friend();
-            Navigation.PushAsync(new FriendOverviewPage(newFriend));
+            
+            Navigation.PushAsync(new FriendEditPage());
         }
 
         private void friendsListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -76,6 +59,7 @@ namespace GroupMeal.Pages
             var mi = ((MenuItem)sender);
             FriendsList.Remove(FriendsList.Where(x => x.friendID == mi.CommandParameter.ToString()).FirstOrDefault());
             this.friendsListView.ItemsSource = this.FriendsList;
+            settings.friendData = this.FriendsList.ToList();
         }
     }
 }
