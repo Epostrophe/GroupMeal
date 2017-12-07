@@ -77,6 +77,7 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
+                
                 <Label x:Name="recipes"
                        Text="{Binding allergies, StringFormat='Allergies:  {0}'}"
                        Grid.Row="4"
@@ -91,8 +92,21 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
+                <Label x:Name="date"
+                       Grid.Row="5"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="3">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Date: " FontAttributes="Bold" FontSize="20"/>
+                            <Span x:Name="finalDate"
+                                  Text=""
+                                  FontSize="20"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
                 <Button x:Name="editButton"
-                        Text="Edit recipe"
+                        Text="Edit event"
                         Clicked="editButton_Clicked"
                         Grid.Row="7"
                         Grid.Column="1"/>

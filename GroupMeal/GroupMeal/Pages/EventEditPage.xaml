@@ -15,6 +15,7 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="100"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -32,7 +33,7 @@
                        Grid.Row="1"
                        Grid.Column="1"
                        Grid.ColumnSpan="2"
-                        />
+                        SelectedIndexChanged="people_SelectedIndexChanged"/>
                 
                 <TimePicker x:Name="time"
                        Grid.Row="2"
@@ -55,11 +56,16 @@
                        Grid.Row="6"
                        Grid.Column="0"
                        Grid.ColumnSpan="3"/>
+                <Label x:Name="selectedPeople"
+                       Grid.Row="7"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="3"/>
+                
 
 
                 <Button x:Name="addEvent"
                         Clicked="addEvent_Clicked"
-                        Grid.Row="7"
+                        Grid.Row="8"
                         Grid.Column="1"
                         Text="Apply"/>
                 

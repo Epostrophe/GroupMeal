@@ -21,6 +21,7 @@ namespace GroupMeal.Pages
             finalTime.Text = Events.time;
             finalLocation.Text = Events.location;
             allRecipes.Text = Events.recipes;
+            finalDate.Text = Events.date; 
             eventOnPage = Events;
         }
 
