@@ -27,7 +27,7 @@ namespace GroupMeal
             allergiesLabel.Text = friend.allergies;
             //nameLabel.Text = friend.fullName;
 
-         
+
 
             selectedFriend = friend;
         }

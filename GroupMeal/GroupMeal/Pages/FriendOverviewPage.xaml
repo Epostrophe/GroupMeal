@@ -23,23 +23,68 @@
                     Grid.Column="0"/>
                 <Label x:Name="firstNameLabel"
                     Grid.Row="0"
-                    Grid.Column="1"/>
+                    Grid.Column="1">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="First Name: " FontAttributes="Bold" FontSize="20"/>
+                            <Span x:Name="firstName"
+                              Text=""
+                              FontSize="20"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
                 <Label x:Name="lastNameLabel"
                        Grid.Row="1"
                        Grid.Column="0"
-                       Grid.ColumnSpan="2"/>
+                       Grid.ColumnSpan="2">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Last Name: " FontAttributes="Bold" FontSize="20"/>
+                            <Span x:Name="lastName"
+                              Text=""
+                              FontSize="20"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
                 <Label x:Name="likesLabel"
                        Grid.Row="2"
                        Grid.Column="0"
-                       Grid.ColumnSpan="2"/>
+                       Grid.ColumnSpan="2">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Likes: " FontAttributes="Bold" FontSize="20"/>
+                            <Span x:Name="likes"
+                              Text=""
+                              FontSize="20"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
                 <Label x:Name="dislikesLabel"
                        Grid.Row="3"
                        Grid.Column="0"
-                       Grid.ColumnSpan="2"/>
+                       Grid.ColumnSpan="2">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Dislikes: " FontAttributes="Bold" FontSize="20"/>
+                            <Span x:Name="dislikes"
+                              Text=""
+                              FontSize="20"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
                 <Label x:Name="allergiesLabel"
                        Grid.Row="4"
                        Grid.Column="0"
-                       Grid.ColumnSpan="2"/>
+                       Grid.ColumnSpan="2">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Allergies: " FontAttributes="Bold" FontSize="20"/>
+                            <Span x:Name="allergies"
+                              Text=""
+                              FontSize="20"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
                 <Button x:Name="editButton"
                         Grid.Row="5"
                         Grid.Column="0"
@@ -47,26 +92,6 @@
                         Text="Edit"
                         Clicked="editButton_Clicked"/>
             </Grid>
-           
-            <!--<Grid BackgroundColor="Gray">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="100"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Image Source="addperson.png"
-                       Grid.Row="1"
-                       Grid.Column="0"
-                       HorizontalOptions="Center"
-                       HeightRequest="50"
-                       WidthRequest="50">
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"/>
-                    </Image.GestureRecognizers>
-                </Image>
-            </Grid>-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
