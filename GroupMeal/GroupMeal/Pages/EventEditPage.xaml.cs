@@ -41,8 +41,11 @@ namespace GroupMeal.Pages
             {
                 @event eventToUpdate = Events.Where(rec => rec.eventID == eventOnPage.eventID).First();
                 eventToUpdate.name = eventName.Text;
-              
+                eventToUpdate.recipes = selectedRecipes.Text;
+                eventToUpdate.people = selectedPeople.Text;
                 eventToUpdate.location = location.Text;
+                eventToUpdate.time = time.Time.ToString();
+                eventToUpdate.date = date.Date.ToString("yyyy-MM-dd");
                
             }
             else
@@ -50,9 +53,11 @@ namespace GroupMeal.Pages
                 eventOnPage = new @event();
 
                 eventOnPage.name = eventName.Text;
-              
+                eventOnPage.recipes = selectedRecipes.Text;
+                eventOnPage.people = selectedPeople.Text;
                 eventOnPage.location = location.Text;
-              
+                eventOnPage.time = time.Time.ToString();
+                eventOnPage.date = date.Date.ToString("yyyy-MM-dd");
                 eventOnPage.eventID = Guid.NewGuid().ToString();
                 Events.Add(eventOnPage);
             }
@@ -68,6 +73,18 @@ namespace GroupMeal.Pages
             if (selectedIndex != -1)
             {
                 selectedRecipes.Text += ((recipe)picker.ItemsSource[selectedIndex]).name + ",";
+                picker.SelectedIndex = -1;
+            }
+        }
+
+        private void people_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var picker = (Picker)sender;
+            int selectedIndex = picker.SelectedIndex;
+
+            if (selectedIndex != -1)
+            {
+                selectedPeople.Text += ((Friend)picker.ItemsSource[selectedIndex]).fullName + ",";
                 picker.SelectedIndex = -1;
             }
         }

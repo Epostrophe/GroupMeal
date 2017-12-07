@@ -43,7 +43,7 @@ namespace GroupMeal.Pages
                 recipe recipeToUpdate = Recipes.Where(rec => rec.recipeID == recipeOnPage.recipeID).First();
                 recipeToUpdate.name = recipeName.Text;
                 recipeToUpdate.allergies = allergens.Text;
-                recipeToUpdate.cookingTime = Convert.ToInt32(cookTime.Text);
+                recipeToUpdate.cookingTime = cookTime.Text;
                 recipeToUpdate.directions = directions.Text;
                 recipeToUpdate.listOfIngredients = ingredients.Text;
                 recipeToUpdate.servings = Convert.ToInt32(servings.Text);
@@ -54,7 +54,7 @@ namespace GroupMeal.Pages
 
                 recipeOnPage.name = recipeName.Text;
                 recipeOnPage.allergies = allergens.Text;
-                recipeOnPage.cookingTime = Convert.ToInt32(cookTime.Text);
+                recipeOnPage.cookingTime = cookTime.Text;
                 recipeOnPage.directions = directions.Text;
                 recipeOnPage.listOfIngredients = ingredients.Text;
                 recipeOnPage.servings = Convert.ToInt32(servings.Text);
